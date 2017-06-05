@@ -87,7 +87,7 @@
             this.TxtPrice.Name = "TxtPrice";
             this.TxtPrice.Size = new System.Drawing.Size(249, 25);
             this.TxtPrice.TabIndex = 9;
-            this.TxtPrice.Text = "";
+            this.TxtPrice.Text = "0.00";
             // 
             // label3
             // 
