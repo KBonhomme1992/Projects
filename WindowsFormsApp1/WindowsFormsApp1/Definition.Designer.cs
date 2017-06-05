@@ -39,7 +39,10 @@
             this.LabelInvoice = new System.Windows.Forms.Label();
             this.TxtInvoice = new System.Windows.Forms.RichTextBox();
             this.BtnExit = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -67,12 +70,12 @@
             this.groupBox1.Size = new System.Drawing.Size(415, 197);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Definition";
             // 
             // Price
             // 
             this.Price.AutoSize = true;
-            this.Price.Location = new System.Drawing.Point(9, 65);
+            this.Price.Location = new System.Drawing.Point(10, 77);
             this.Price.Name = "Price";
             this.Price.Size = new System.Drawing.Size(37, 13);
             this.Price.TabIndex = 10;
@@ -89,7 +92,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 31);
+            this.label3.Location = new System.Drawing.Point(10, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 8;
@@ -106,7 +109,7 @@
             // LabelPayDate
             // 
             this.LabelPayDate.AutoSize = true;
-            this.LabelPayDate.Location = new System.Drawing.Point(9, 152);
+            this.LabelPayDate.Location = new System.Drawing.Point(10, 164);
             this.LabelPayDate.Name = "LabelPayDate";
             this.LabelPayDate.Size = new System.Drawing.Size(51, 13);
             this.LabelPayDate.TabIndex = 14;
@@ -124,7 +127,7 @@
             // 
             this.LabelInvoice.AutoSize = true;
             this.LabelInvoice.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.LabelInvoice.Location = new System.Drawing.Point(9, 118);
+            this.LabelInvoice.Location = new System.Drawing.Point(10, 118);
             this.LabelInvoice.Name = "LabelInvoice";
             this.LabelInvoice.Size = new System.Drawing.Size(100, 13);
             this.LabelInvoice.TabIndex = 12;
@@ -147,11 +150,31 @@
             this.BtnExit.Text = "Exit";
             this.BtnExit.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(518, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(485, 295);
+            this.dataGridView1.TabIndex = 7;
+            // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Location = new System.Drawing.Point(982, 12);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(21, 295);
+            this.vScrollBar1.TabIndex = 8;
+            // 
             // Definition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 319);
+            this.ClientSize = new System.Drawing.Size(1015, 319);
+            this.Controls.Add(this.vScrollBar1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
@@ -159,6 +182,7 @@
             this.Text = "Definition";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -175,5 +199,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox TxtName;
         private System.Windows.Forms.Button BtnExit;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
     }
 }
