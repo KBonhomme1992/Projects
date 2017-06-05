@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="f:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Targets>
+  <Target Name="C:\Users\bonhkarl01\documents\visual studio 2015\Projects\PCL\PCL\bin\Debug\PCL Searcher.exe">
+   <Modules>
+    <Module Name="pcl searcher.exe">
+     <Namespaces>
+      <Namespace Name="PCL">
+       <Types>
+        <Type Name="Form1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Finalize()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2016-12-19 18:46:13Z" FixCategory="Breaking">
+             <Issue Name="FinalizeImplementation" Certainty="95" Level="Error" Path="C:\Users\bonhkarl01\documents\visual studio 2015\Projects\PCL\PCL" File="Form1.Designer.vb" Line="110">Modify 'Form1.Finalize()' so that it calls Dispose(false) and then returns.</Issue>
+             <Issue Name="FinalizeOverride" Certainty="95" Level="Error" Path="C:\Users\bonhkarl01\documents\visual studio 2015\Projects\PCL\PCL" File="Form1.Designer.vb" Line="110">Remove the finalizer from type 'Form1', override Dispose(bool disposing), and put the finalization logic in the code path where 'disposing' is false.</Issue>
+            </Message>
+            <Message TypeName="RemoveEmptyFinalizers" Category="Microsoft.Performance" CheckId="CA1821" Status="Active" Created="2016-12-19 18:46:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\bonhkarl01\documents\visual studio 2015\Projects\PCL\PCL" File="Form1.Designer.vb" Line="110">'Form1' implements a finalizer that only calls conditionally emitted methods or the base type finalizer. Remove the finalizer or ensure that it is only conditionally compiled into the assembly. If this violation occurs against a finalizer that is entirely wrapped in a conditionally-emitted block of code, suppress this message.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063">
+   <Name>Implement IDisposable correctly</Name>
+   <Description>All IDisposable types should implement the Dispose pattern correctly.</Description>
+   <Resolution Name="FinalizeImplementation">Modify {0} so that it calls Dispose(false) and then returns.</Resolution>
+   <Resolution Name="FinalizeOverride">Remove the finalizer from type {0}, override Dispose(bool disposing), and put the finalization logic in the code path where 'disposing' is false.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms244737.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="RemoveEmptyFinalizers" Category="Microsoft.Performance" CheckId="CA1821">
+   <Name>Remove empty finalizers</Name>
+   <Description>Finalizers should be avoided where possible, to avoid the additional performance overhead involved in tracking object lifetime.</Description>
+   <Resolution Name="Default">{0} implements a finalizer that only calls conditionally emitted methods or the base type finalizer. Remove the finalizer or ensure that it is only conditionally compiled into the assembly. If this violation occurs against a finalizer that is entirely wrapped in a conditionally-emitted block of code, suppress this message.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264476.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

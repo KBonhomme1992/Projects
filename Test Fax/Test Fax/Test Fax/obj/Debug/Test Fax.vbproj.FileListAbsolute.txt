@@ -1,0 +1,11 @@
+C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\Test Fax\Test Fax\Test Fax\bin\Debug\Test Fax.exe.config
+C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\Test Fax\Test Fax\Test Fax\bin\Debug\Test Fax.exe
+C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\Test Fax\Test Fax\Test Fax\bin\Debug\Test Fax.pdb
+C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\Test Fax\Test Fax\Test Fax\bin\Debug\Test Fax.xml
+C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\Test Fax\Test Fax\Test Fax\obj\Debug\Test Fax.vbprojResolveAssemblyReference.cache
+C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\Test Fax\Test Fax\Test Fax\obj\Debug\Test_Fax.Form1.resources
+C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\Test Fax\Test Fax\Test Fax\obj\Debug\Test_Fax.Resources.resources
+C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\Test Fax\Test Fax\Test Fax\obj\Debug\Test Fax.vbproj.GenerateResource.Cache
+C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\Test Fax\Test Fax\Test Fax\obj\Debug\Test Fax.exe
+C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\Test Fax\Test Fax\Test Fax\obj\Debug\Test Fax.xml
+C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\Test Fax\Test Fax\Test Fax\obj\Debug\Test Fax.pdb

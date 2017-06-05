@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SupportDataSet" targetNamespace="http://tempuri.org/SupportDataSet.xsd" xmlns:mstns="http://tempuri.org/SupportDataSet.xsd" xmlns="http://tempuri.org/SupportDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="SupportConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SupportConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Dash.My.MySettings.GlobalReference.Default.SupportConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_SupportLogForExcelTableAdapter" GeneratorDataComponentClassName="vw_SupportLogForExcelTableAdapter" Name="vw_SupportLogForExcel" UserDataComponentName="vw_SupportLogForExcelTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SupportConnectionString (MySettings)" DbObjectName="Support.dbo.vw_SupportLogForExcel" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Notes, ID_Order, [Log ID], Name, Software, [Received Date], Priority, Description, Department, [Assigned Tech] FROM dbo.vw_SupportLogForExcel</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Notes" DataSetColumn="Notes" />
+              <Mapping SourceColumn="ID_Order" DataSetColumn="ID_Order" />
+              <Mapping SourceColumn="Log ID" DataSetColumn="Log ID" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Software" DataSetColumn="Software" />
+              <Mapping SourceColumn="Received Date" DataSetColumn="Received Date" />
+              <Mapping SourceColumn="Priority" DataSetColumn="Priority" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Department" DataSetColumn="Department" />
+              <Mapping SourceColumn="Assigned Tech" DataSetColumn="Assigned Tech" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SupportDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SupportDataSet" msprop:Generator_UserDSName="SupportDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_SupportLogForExcel" msprop:Generator_TableClassName="vw_SupportLogForExcelDataTable" msprop:Generator_TableVarName="tablevw_SupportLogForExcel" msprop:Generator_TablePropName="vw_SupportLogForExcel" msprop:Generator_RowDeletingName="vw_SupportLogForExcelRowDeleting" msprop:Generator_RowChangingName="vw_SupportLogForExcelRowChanging" msprop:Generator_RowEvHandlerName="vw_SupportLogForExcelRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_SupportLogForExcelRowDeleted" msprop:Generator_UserTableName="vw_SupportLogForExcel" msprop:Generator_RowChangedName="vw_SupportLogForExcelRowChanged" msprop:Generator_RowEvArgName="vw_SupportLogForExcelRowChangeEvent" msprop:Generator_RowClassName="vw_SupportLogForExcelRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Notes" msprop:Generator_ColumnVarNameInTable="columnNotes" msprop:Generator_ColumnPropNameInRow="Notes" msprop:Generator_ColumnPropNameInTable="NotesColumn" msprop:Generator_UserColumnName="Notes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID_Order" msprop:Generator_ColumnVarNameInTable="columnID_Order" msprop:Generator_ColumnPropNameInRow="ID_Order" msprop:Generator_ColumnPropNameInTable="ID_OrderColumn" msprop:Generator_UserColumnName="ID_Order" type="xs:short" minOccurs="0" />
+              <xs:element name="Log_x0020_ID" msprop:Generator_ColumnVarNameInTable="columnLog_ID" msprop:Generator_ColumnPropNameInRow="Log_ID" msprop:Generator_ColumnPropNameInTable="Log_IDColumn" msprop:Generator_UserColumnName="Log ID" type="xs:double" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Software" msprop:Generator_ColumnVarNameInTable="columnSoftware" msprop:Generator_ColumnPropNameInRow="Software" msprop:Generator_ColumnPropNameInTable="SoftwareColumn" msprop:Generator_UserColumnName="Software">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Received_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnReceived_Date" msprop:Generator_ColumnPropNameInRow="Received_Date" msprop:Generator_ColumnPropNameInTable="Received_DateColumn" msprop:Generator_UserColumnName="Received Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Priority" msprop:Generator_ColumnVarNameInTable="columnPriority" msprop:Generator_ColumnPropNameInRow="Priority" msprop:Generator_ColumnPropNameInTable="PriorityColumn" msprop:Generator_UserColumnName="Priority" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Department" msprop:Generator_ColumnVarNameInTable="columnDepartment" msprop:Generator_ColumnPropNameInRow="Department" msprop:Generator_ColumnPropNameInTable="DepartmentColumn" msprop:Generator_UserColumnName="Department" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Assigned_x0020_Tech" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAssigned_Tech" msprop:Generator_ColumnPropNameInRow="Assigned_Tech" msprop:Generator_ColumnPropNameInTable="Assigned_TechColumn" msprop:Generator_UserColumnName="Assigned Tech" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="51" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
