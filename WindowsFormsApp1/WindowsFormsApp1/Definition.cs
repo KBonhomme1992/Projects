@@ -10,21 +10,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    
-    
-
-    public partial class Form1 : Form
+    public partial class Definition : Form
     {
-        public Form1()
+        public Definition()
         {
             InitializeComponent();
-
         }
 
-        private void invoicesDefinitionToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Definition settingsform = new Definition();
-            settingsform.Show();
+
         }
     }
 }
