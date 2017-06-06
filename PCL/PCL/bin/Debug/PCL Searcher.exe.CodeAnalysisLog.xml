@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="f:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
-<FxCopReport Version="14.0">
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
  <Targets>
-  <Target Name="C:\Users\bonhkarl01\documents\visual studio 2015\Projects\PCL\PCL\bin\Debug\PCL Searcher.exe">
+  <Target Name="C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\PCL\PCL\bin\Debug\PCL Searcher.exe">
    <Modules>
     <Module Name="pcl searcher.exe">
      <Namespaces>
@@ -12,12 +12,19 @@
          <Members>
           <Member Name="#Finalize()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2016-12-19 18:46:13Z" FixCategory="Breaking">
-             <Issue Name="FinalizeImplementation" Certainty="95" Level="Error" Path="C:\Users\bonhkarl01\documents\visual studio 2015\Projects\PCL\PCL" File="Form1.Designer.vb" Line="110">Modify 'Form1.Finalize()' so that it calls Dispose(false) and then returns.</Issue>
-             <Issue Name="FinalizeOverride" Certainty="95" Level="Error" Path="C:\Users\bonhkarl01\documents\visual studio 2015\Projects\PCL\PCL" File="Form1.Designer.vb" Line="110">Remove the finalizer from type 'Form1', override Dispose(bool disposing), and put the finalization logic in the code path where 'disposing' is false.</Issue>
+            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2017-06-06 13:55:31Z" FixCategory="Breaking">
+             <Issue Name="FinalizeImplementation" Certainty="95" Level="Error" Path="C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\PCL\PCL" File="Form1.Designer.vb" Line="110">Modify 'Form1.Finalize()' so that it calls Dispose(false) and then returns.</Issue>
+             <Issue Name="FinalizeOverride" Certainty="95" Level="Error" Path="C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\PCL\PCL" File="Form1.Designer.vb" Line="110">Remove the finalizer from type 'Form1', override Dispose(bool disposing), and put the finalization logic in the code path where 'disposing' is false.</Issue>
             </Message>
-            <Message TypeName="RemoveEmptyFinalizers" Category="Microsoft.Performance" CheckId="CA1821" Status="Active" Created="2016-12-19 18:46:13Z" FixCategory="NonBreaking">
-             <Issue Certainty="75" Level="Warning" Path="C:\Users\bonhkarl01\documents\visual studio 2015\Projects\PCL\PCL" File="Form1.Designer.vb" Line="110">'Form1' implements a finalizer that only calls conditionally emitted methods or the base type finalizer. Remove the finalizer or ensure that it is only conditionally compiled into the assembly. If this violation occurs against a finalizer that is entirely wrapped in a conditionally-emitted block of code, suppress this message.</Issue>
+            <Message TypeName="RemoveEmptyFinalizers" Category="Microsoft.Performance" CheckId="CA1821" Status="Active" Created="2017-06-06 13:55:31Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\PCL\PCL" File="Form1.Designer.vb" Line="110">'Form1' implements a finalizer that only calls conditionally emitted methods or the base type finalizer. Remove the finalizer or ensure that it is only conditionally compiled into the assembly. If this violation occurs against a finalizer that is entirely wrapped in a conditionally-emitted block of code, suppress this message.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Movefile(System.Object,System.Object,System.Object)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2017-06-06 13:55:31Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\PCL\PCL" File="Form1.vb" Line="69">'Form1.Movefile(Object, Object, Object)' calls into 'Process.Start(String, String)' which has a LinkDemand. By making this call, 'Process.Start(String, String)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'Form1.Movefile(Object, Object, Object)'&#xD;&#xA;   -&gt;'Form1.Movefile(Object, Object, Object)'</Issue>
             </Message>
            </Messages>
           </Member>
@@ -31,6 +38,16 @@
   </Target>
  </Targets>
  <Rules>
+  <Rule TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122">
+   <Name>Do not indirectly expose methods with link demands</Name>
+   <Description>Do not wrap a method protected by a LinkDemand with a method that does not perform a security check. A LinkDemand checks the permissions of the immediate caller rather than checking the permissions of all callers in the call stack. In this case, the permissions of the wrapper method will be checked. If the wrapper method does not, itself, check the permissions of callers higher in the call stack, malicious code might be able to execute the wrapped function even though it lacks permission to do so.</Description>
+   <Resolution Name="Default">{0} calls into {1} which has a LinkDemand. By making this call, {1} is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: {2}</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182303.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="33">CriticalError</MessageLevel>
+   <File Name="securityrules.dll" Version="15.0.0.0" />
+  </Rule>
   <Rule TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063">
    <Name>Implement IDisposable correctly</Name>
    <Description>All IDisposable types should implement the Dispose pattern correctly.</Description>
@@ -40,7 +57,7 @@
    <Url>http://msdn.microsoft.com/library/ms244737.aspx</Url>
    <Email>[none]</Email>
    <MessageLevel Certainty="95">Error</MessageLevel>
-   <File Name="designrules.dll" Version="14.0.0.0" />
+   <File Name="designrules.dll" Version="15.0.0.0" />
   </Rule>
   <Rule TypeName="RemoveEmptyFinalizers" Category="Microsoft.Performance" CheckId="CA1821">
    <Name>Remove empty finalizers</Name>
@@ -50,7 +67,7 @@
    <Url>http://msdn.microsoft.com/library/bb264476.aspx</Url>
    <Email>[none]</Email>
    <MessageLevel Certainty="75">Warning</MessageLevel>
-   <File Name="performancerules.dll" Version="14.0.0.0" />
+   <File Name="performancerules.dll" Version="15.0.0.0" />
   </Rule>
  </Rules>
  <Localized>

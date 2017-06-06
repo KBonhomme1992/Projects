@@ -14,3 +14,7 @@ C:\Users\bonhkarl01\documents\visual studio 2015\Projects\PCL\PCL\obj\Pub\PCL Se
 C:\Users\bonhkarl01\documents\visual studio 2015\Projects\PCL\PCL\obj\Pub\PCL Searcher.xml
 C:\Users\bonhkarl01\documents\visual studio 2015\Projects\PCL\PCL\obj\Pub\PCL Searcher.pdb
 C:\Users\bonhkarl01\documents\visual studio 2015\Projects\PCL\PCL\obj\Pub\PCL.vbprojResolveAssemblyReference.cache
+C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\PCL\PCL\bin\Pub\PCL Searcher.exe.config
+C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\PCL\PCL\obj\Pub\PCL Searcher.exe
+C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\PCL\PCL\obj\Pub\PCL Searcher.xml
+C:\Users\bonhkarl01\Documents\Visual Studio 2017\Projects\PCL\PCL\obj\Pub\PCL Searcher.pdb

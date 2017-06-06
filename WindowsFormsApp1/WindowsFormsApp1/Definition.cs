@@ -27,9 +27,12 @@ namespace WindowsFormsApp1
         {
             String cpt;
             double price;
-
+            String InvoiceDate;
+            String Due;
 
             cpt = TxtName.Text;
+            InvoiceDate = TxtInvoice.Text;
+            Due = TxtDue.Text;
 
             if (TxtPrice != null) 
             {
@@ -42,17 +45,17 @@ namespace WindowsFormsApp1
             MessageBox.Show(cpt);
             MessageBox.Show(Convert.ToString(price));
 
-            SaveData(cpt, Convert.ToDouble(price));
+            SaveData(cpt, Convert.ToDouble(price), InvoiceDate, Due);
 
         }
 
 
-        void SaveData(string cptname, Double prc)
+        void SaveData(string cptname, Double prc, String Inv, String Due)
         {
             // Create a hashtable of values that will eventually be serialized.
             Hashtable Data = new Hashtable();
-            Data.Add("Jeff", "123 Main Street, Redmond, WA 98052");
-            Data.Add("Fred", "987 Pine Road, Phila., PA 19116");
+            Data.Add(cptname, prc, Inv, Due);
+            Data.Add("", "987 Pine Road, Phila., PA 19116");
             Data.Add("Mary", "PO Box 112233, Palo Alto, CA 94301");
 
             // To serialize the hashtable and its key/value pairs,   
